@@ -5,6 +5,7 @@ import Pantalla from "./componentes/Pantalla";
 import BotonClear from "./componentes/BotonClear";
 import { useState } from "react";
 import { evaluate } from "mathjs";
+import LogoFreeCodeCamp from "./componentes/LogoFreeCodeCamp";
 
 function App() {
   //Valor ingresado por el usuario(input) y (setInput) para actualizar el input
@@ -18,19 +19,26 @@ function App() {
     if (input) {
       setInput(evaluate(input));
     } else {
-      alert('Por favor ingrese valores para realizar el calculo')
+      alert("Por favor ingrese valores para realizar el calculo");
     }
   };
 
+  // const unOperador = (valor) => {
+  //   return valor === "+" || valor === "-" || valor === "*" || valor === "/";
+  // };
+
+  // const pulseUnOperador = () => {
+  //   if (input) {
+  //     setInput(unOperador(input))
+  //     return unOperador;
+  //   } else {
+  //     alert('Solo puede ingresar un operador')
+  //   }
+  // };
+
   return (
     <div className="App">
-      <div className="freecodecamp-logo-contenedor">
-        <img
-          src={freeCodeCamp}
-          className="freecodecamp-logo"
-          alt="Logo de freecodecamp"
-        />
-      </div>
+      <LogoFreeCodeCamp />
       <div className="contenedor-calculadora">
         <Pantalla input={input} />
         <div className="fila">
