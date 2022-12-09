@@ -1,6 +1,7 @@
 import "./App.css";
 import freeCodeCamp from "./imagenes/freecodecamp-logo.jpg";
 import ListaDeTareas from "./componentes/ListaDeTareas";
+import Tarea from "./componentes/Tarea";
 
 function App() {
   return (
